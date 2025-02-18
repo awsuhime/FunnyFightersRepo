@@ -27,11 +27,9 @@ public class playerShoot : MonoBehaviour
     private float rotz;
 
     
-    void Start()
-    {
-    }
+    
 
-    void Update()
+    public void Shoot()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         rotation = mousePos - transform.position;
@@ -43,10 +41,9 @@ public class playerShoot : MonoBehaviour
             reloaded = false;
             Invoke(nameof(Reload), reloadTime);
 
-            
+
             Instantiate(projectile, transform.position, Quaternion.Euler(0f, 0f, rotz));
         }
-        
     }
 
     void Reload()
