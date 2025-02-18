@@ -12,6 +12,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float hori = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(hori, vert).normalized * Time.deltaTime * speed * 20;
+        rb.velocity = new Vector2(hori, vert).normalized * speed;
     }
 }
