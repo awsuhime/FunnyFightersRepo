@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     public float maxHealth;
-    private float health;
+    public float health;
 
     
     

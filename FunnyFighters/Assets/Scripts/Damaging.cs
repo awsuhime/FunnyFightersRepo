@@ -8,7 +8,7 @@ public class Damaging : MonoBehaviour
     public float damage = 5;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Damageable"))
+        if (collision.GetComponent<Health>() != null)
         {
             Health health = collision.GetComponent<Health>();
             health.takeDamage(damage);

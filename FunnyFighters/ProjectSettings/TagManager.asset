@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Damageable
   - LineMaker
+  - Selectable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Selectable
   - Water
   - UI
   - 
