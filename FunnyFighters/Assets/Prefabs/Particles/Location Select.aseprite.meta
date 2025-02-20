@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 10
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638754862252007440
+  platformSettingsDirtyTick: 638756391497222829
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -181,6 +181,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 44}
+  - name: Location Select_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 4
+      height: 4
+    spriteID: e4a778bfbd5846946bdc21a6ee19b2a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 56}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -217,6 +237,15 @@ ScriptedImporter:
         width: 4
         height: 4
       spriteId: e61ef42d2080d68459a3e336ce8bc333
+    - name: Location Select_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 14
+        width: 4
+        height: 4
+      spriteId: e4a778bfbd5846946bdc21a6ee19b2a5
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -293,6 +322,18 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: tvOS
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: VisionOS
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
