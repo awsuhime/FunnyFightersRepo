@@ -32,7 +32,7 @@ public class BoxSelection : MonoBehaviour
             Debug.Log(hits.Length);
             foreach (Collider2D hit in hits)
             {
-                if (hit.gameObject.CompareTag("Selectable"))
+                if (hit.gameObject.CompareTag("Selectable") || hit.gameObject.CompareTag("Enemy"))
                 {
                     target = hit.gameObject;    
                     

@@ -32,6 +32,8 @@ public class Minion : MonoBehaviour
     private Vector3 mousePos;
     private float rotz;
 
+    
+
 
     private void Start()
     {
@@ -52,26 +54,47 @@ public class Minion : MonoBehaviour
         }
         if (attacking)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) < attackDistance)
+            if (target != null)
             {
-                agent.SetDestination(transform.position);
-                if (reloaded)
+                if (Vector3.Distance(transform.position, target.transform.position) < attackDistance)
                 {
-                    rotation = target.transform.position - transform.position;
-                    rotz = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-                    //Shooting
+                    agent.SetDestination(transform.position);
                     if (reloaded)
                     {
-                        reloadStart = Time.time;
-                        reloaded = false;
-                        Instantiate(projectile, transform.position, Quaternion.Euler(0f, 0f, rotz));
+                        rotation = target.transform.position - transform.position;
+                        rotz = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+                        //Shooting
+                        if (reloaded)
+                        {
+                            reloadStart = Time.time;
+                            reloaded = false;
+                            Instantiate(projectile, transform.position, Quaternion.Euler(0f, 0f, rotz));
+                        }
                     }
+                }
+                else
+                {
+                    agent.SetDestination(target.transform.position);
+
                 }
             }
             else
             {
-                agent.SetDestination(target.transform.position);
-                
+                attacking = false;
+                agent.SetDestination(transform.position);
+                Enemy[] enemies = FindObjectsOfType<Enemy>();
+                foreach (Enemy i in enemies)
+                {
+                    if (target == null)
+                    {
+                        if (Vector3.Distance(i.transform.position, transform.position) < attackDistance)
+                        {
+                            target = i.gameObject;
+                            attacking = true;
+                        }
+                    }
+                    
+                }
             }
 
 
