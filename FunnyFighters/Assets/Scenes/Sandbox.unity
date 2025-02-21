@@ -515,6 +515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 500
   health: 0
+  damagePopup: {fileID: 4220325552891526371, guid: 0165e69f708d6354eadfa6f613edecd5, type: 3}
 --- !u!1 &240029880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4e704abb6471e4c9cda4a27c7a1452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTime: 11
+  reloadTime: 2
   spriteRenderer: {fileID: 0}
   projectile: {fileID: 5054531376371184460, guid: 41535db121311e145a69153510f4337e, type: 3}
 --- !u!114 &1038170306
@@ -1363,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1000
   health: 0
+  damagePopup: {fileID: 4220325552891526371, guid: 0165e69f708d6354eadfa6f613edecd5, type: 3}
 --- !u!114 &1038170307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,6 +2705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6404528017991732206, guid: cdc339e22f84a1348a2158d305f65d31, type: 3}
+      propertyPath: damagePopup
+      value: 
+      objectReference: {fileID: 4220325552891526371, guid: 0165e69f708d6354eadfa6f613edecd5, type: 3}
     - target: {fileID: 8341079857632437790, guid: cdc339e22f84a1348a2158d305f65d31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

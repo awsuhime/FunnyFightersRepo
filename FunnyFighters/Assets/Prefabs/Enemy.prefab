@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 35
   health: 0
+  damagePopup: {fileID: 4220325552891526371, guid: 0165e69f708d6354eadfa6f613edecd5, type: 3}
 --- !u!195 &4243781713966565154
 NavMeshAgent:
   m_ObjectHideFlags: 0

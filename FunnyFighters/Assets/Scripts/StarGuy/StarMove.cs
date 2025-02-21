@@ -12,7 +12,8 @@ public class StarMove : MonoBehaviour
     public float damage = 1;
     private float attackStart;
     public float atttackInterval = 0.1f;
-
+    public float rotateSpeed;
+    public GameObject sprite;
     private List<GameObject> hits = new List<GameObject>();
 
     private void Start()
@@ -22,8 +23,9 @@ public class StarMove : MonoBehaviour
     }
     void Update()
     {
-        
-            if (Time.time - attackStart > atttackInterval)
+        sprite.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+
+        if (Time.time - attackStart > atttackInterval)
             {
                 Damage();
             }
