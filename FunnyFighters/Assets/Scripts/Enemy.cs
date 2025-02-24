@@ -35,10 +35,16 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == player)
+        if (collision.gameObject.GetComponent<Health>() != null)
         {
-            Health health = player.GetComponent<Health>();
-            health.takeDamage(damage);
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (health.ally)
+            {
+                health.takeDamage(damage);
+            }
+
+
         }
+        
     }
 }

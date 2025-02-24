@@ -8,6 +8,8 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public float health;
     public GameObject damagePopup;
+
+    public bool ally = false;
     
     
     void Start()
