@@ -49,17 +49,29 @@ public class StarMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.GetComponent<Health>() != null)
         {
-            hits.Add(collision.gameObject);
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (!health.ally)
+            {
+                hits.Add(collision.gameObject);
+            }
+
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.GetComponent<Health>() != null)
         {
-            hits.Remove(collision.gameObject);
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (!health.ally)
+            {
+                hits.Remove(collision.gameObject);
+            }
+
         }
+        
     }
 }

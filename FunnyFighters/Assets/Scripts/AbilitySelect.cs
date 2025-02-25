@@ -8,7 +8,7 @@ public class AbilitySelect : MonoBehaviour
 {
     public int currentSelection;
     private int maxAbilities;
-
+    public AbilityIcon[] icons;
     public UnityEvent first;
     public UnityEvent second;
     public UnityEvent third;
@@ -51,11 +51,20 @@ public class AbilitySelect : MonoBehaviour
                 if (currentSelection != 1)
                 {
                     currentSelection = 1;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(1);
+                    }
                 }
                 else
                 {
                     currentSelection = 0;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(0);
+                    }
                 }
+                
             }
             
         }
@@ -66,13 +75,22 @@ public class AbilitySelect : MonoBehaviour
                 if (currentSelection != 2)
                 {
                     currentSelection = 2;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(2);
+                    }
                 }
                 else
                 {
                     currentSelection = 0;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(0);
+                    }
                 }
             }
             
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -81,13 +99,22 @@ public class AbilitySelect : MonoBehaviour
                 if (currentSelection != 3)
                 {
                     currentSelection = 3;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(3);
+                    }
                 }
                 else
                 {
                     currentSelection = 0;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(0);
+                    }
                 }
             }
-           
+            
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -96,14 +123,22 @@ public class AbilitySelect : MonoBehaviour
                 if (currentSelection != 4)
                 {
                     currentSelection = 4;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(4);
+                    }
                 }
                 else
                 {
                     currentSelection = 0;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(0);
+                    }
                 }
             }
-
             
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
@@ -112,14 +147,22 @@ public class AbilitySelect : MonoBehaviour
                 if (currentSelection != 5)
                 {
                     currentSelection = 5;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(5);
+                    }
                 }
                 else
                 {
                     currentSelection = 0;
+                    foreach (AbilityIcon i in icons)
+                    {
+                        i.Select(0);
+                    }
                 }
             }
-
             
+
         }
     }
 }
